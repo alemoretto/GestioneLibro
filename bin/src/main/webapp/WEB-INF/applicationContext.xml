@@ -31,7 +31,7 @@
 
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://127.0.0.1:3306/gestionelibro" />
+		<property name="url" value="jdbc:mysql://192.168.99.100:3306/gestionelibro" />
 		<property name="username" value="root" />
 		<property name="password" value="root" />
 	</bean>
@@ -46,7 +46,7 @@
 				<property name="databasePlatform" value="org.hibernate.dialect.MySQL5Dialect"/>
 				
 				<!--  impostare a false dopo creazione tabelle in seguito a primo run -->
-				<property name="generateDdl" value="true" />
+				<property name="generateDdl" value="false" />
 			</bean>
 		</property>
 	</bean>
