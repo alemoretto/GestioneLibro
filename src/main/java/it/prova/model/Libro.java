@@ -28,6 +28,28 @@ public class Libro {
 	@JoinColumn(name = "autore_id", nullable = false)
 	private Autore autore;
 
+	public Libro() {
+	}
+
+	public Libro(Long id, String titolo, String genere, Integer numeroPagine, Date dataPubblicazione, Autore autore) {
+		super();
+		this.id = id;
+		this.titolo = titolo;
+		this.genere = genere;
+		this.numeroPagine = numeroPagine;
+		this.dataPubblicazione = dataPubblicazione;
+		this.autore = autore;
+	}
+
+	public Libro(Long id, String titolo, String genere, Integer numeroPagine, Date dataPubblicazione) {
+		super();
+		this.id = id;
+		this.titolo = titolo;
+		this.genere = genere;
+		this.numeroPagine = numeroPagine;
+		this.dataPubblicazione = dataPubblicazione;
+	}
+	
 	public Long getId() {
 		return id;
 	}

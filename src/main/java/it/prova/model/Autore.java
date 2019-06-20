@@ -31,6 +31,10 @@ public class Autore {
 	public Autore() {
 	}
 
+	public Autore(Long id) {
+		this.id = id;
+	}
+	
 	public Autore(String nome, String cognome, Date dataNascita, String nickname) {
 		this.nome = nome;
 		this.cognome = cognome;
@@ -94,4 +98,7 @@ public class Autore {
 		this.libri = libri;
 	}
 
+	public String toString() {
+		return nome + " " + cognome;
+	}
 }

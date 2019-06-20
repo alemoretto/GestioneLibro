@@ -19,6 +19,14 @@ public class AutoreDTO {
 	public AutoreDTO() {
 	}
 
+	public AutoreDTO(Long id, String nome, String cognome, Date dataDiNascita, String nickname) {
+		this.id = id;
+		this.nome = nome;
+		this.cognome = cognome;
+		this.dataNascita = dataDiNascita;
+		this.nickname = nickname;
+	}
+	
 	public AutoreDTO(Autore autoreInput) {
 		this.id = autoreInput.getId();
 		this.nome = autoreInput.getNome();
@@ -71,6 +79,10 @@ public class AutoreDTO {
 		return new Autore(input.getId(),input.getNome(), input.getCognome(), input.getDataNascita(), input.getNickname());
 	}
 
+	public static AutoreDTO buildAutoreDTOInstance(Autore input) {
+		return new AutoreDTO(input.getId(),input.getNome(), input.getCognome(), input.getDataNascita(), input.getNickname());
+	}
+	
 	public static Autore buildAutoreInstanceForFindByExample(AutoreDTO input) {
 		Autore example = new Autore();
 		example.setNome(StringUtils.isNotBlank(input.getNome()) ? input.getNome() : null);
@@ -80,4 +92,7 @@ public class AutoreDTO {
 		return example;
 	}
 
+	public String toString() {
+		return nome + " " + cognome;
+	}
 }

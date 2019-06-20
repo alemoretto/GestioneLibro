@@ -21,7 +21,7 @@
     <div class="jumbotron">
       <div class="container">
         <h1 class="display-4">Gestione Libro</h1>
-        <p><a class="btn btn-primary btn-lg" href="${pageContext.request.contextPath}/libro" role="button">Vai alla Gestione &raquo;</a></p>
+        <p><a class="btn btn-primary btn-lg" href="${pageContext.request.contextPath}/libro/search" role="button">Vai alla Gestione &raquo;</a></p>
       </div>
       
     </div>
