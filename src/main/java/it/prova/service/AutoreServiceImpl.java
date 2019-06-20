@@ -42,8 +42,7 @@ public class AutoreServiceImpl implements AutoreService {
 
 	@Override
 	public void rimuovi(Autore autoreInstance) {
-		// TODO Auto-generated method stub
-
+		autoreRepository.delete(autoreInstance);
 	}
 
 	@Transactional(readOnly = true)

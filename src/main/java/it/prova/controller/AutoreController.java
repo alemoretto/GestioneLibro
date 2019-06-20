@@ -92,4 +92,12 @@ public class AutoreController {
 		return "/autore/list";
 	}
 
+	@RequestMapping(value = "delete", method = RequestMethod.GET)
+	public String delete(@RequestParam("idAutore") Long idAutore, Model model) {
+
+		autoreService.rimuovi(autoreService.caricaSingolo(idAutore));
+
+		model.addAttribute("listAutori", autoreService.listAllAutori());
+		return "/autore/list";
+	}
 }

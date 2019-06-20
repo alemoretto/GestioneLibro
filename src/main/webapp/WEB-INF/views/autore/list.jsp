@@ -38,7 +38,10 @@
 							href="show?idAutore=${autoreItem.id }"
 							class="btn btn-info">Dettaglio</a> <a
 							href="edit?idAutore=${autoreItem.id }"
-							class="btn btn-info">Modifica</a></td>
+							class="btn btn-info">Modifica</a> <a
+							href="delete?idAutore=${autoreItem.id }"
+							class="btn btn-info">Elimina</a></td>
+							
 					</tr>
 				</c:forEach>
 
